@@ -1,0 +1,56 @@
+﻿@model Gestion_Immobiliére.Models.Owner
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>OwnerClass</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name_owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name_owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.First_name_owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.First_name_owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.E_mail_owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.E_mail_owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone_number_owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone_number_owner)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

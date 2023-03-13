@@ -1,0 +1,50 @@
+﻿@model Gestion_Immobiliére.Models.Owner
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OwnerClass</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name_owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name_owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.First_name_owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.First_name_owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.E_mail_owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.E_mail_owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone_number_owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone_number_owner)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_owner }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
